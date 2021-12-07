@@ -8,15 +8,15 @@ var result = '';
 let isZero = false;
 let i = 0;
 while (isZero === false) {
-    var num = input[i].split(' ');
-    var a = parseInt(num[0]);
-    var b = parseInt(num[1]);
-    if (a + b === 0) {
-        isZero = true
-    } else {
-        result += a + b + '\n';
-        i++;
-    }
+	var num = input[i].split(' ');
+	var a = parseInt(num[0]);
+	var b = parseInt(num[1]);
+	if (a + b === 0) {
+		isZero = true;
+		break;
+	}
+	result += a + b + '\n';
+	i++;
 }
 
 console.log(result);
@@ -35,5 +35,3 @@ console.log(result);
 //     }
 //     result += a + b + '\n';
 // }
-
-

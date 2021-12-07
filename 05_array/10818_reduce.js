@@ -1,0 +1,25 @@
+// 최소, 최대
+
+// const input = '5\n20 10 35 30 7'.split('\n');
+const fs = require('fs');
+const input = fs.readFileSync('/dev/stdin').toString().split('\n');
+
+const array = input[1].split(' ').map((item) => parseInt(item));
+
+const max = (prev, cur) => {
+	if (prev > cur) {
+		return prev;
+	} else {
+		return cur;
+	}
+};
+
+const min = (prev, cur) => {
+	if (prev < cur) {
+		return prev;
+	} else {
+		return cur;
+	}
+};
+console.log(array.reduce(min));
+console.log(array.reduce(max));
